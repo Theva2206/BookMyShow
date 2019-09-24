@@ -1,0 +1,18 @@
+﻿@model BookMyShow.Models.Movie
+@{
+    ViewBag.Title = "Movie";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie</h2>
+
+<table>
+    <tr>
+        <td>Movie ID</td>
+        <td>Movie Name</td>
+    </tr>
+    <tr>
+        <td>@Model.MovieId</td>
+        <td>@Model.MovieName</td>
+    </tr>
+</table>

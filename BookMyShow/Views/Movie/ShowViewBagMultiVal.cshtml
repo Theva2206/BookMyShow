@@ -1,0 +1,50 @@
+﻿@model BookMyShow.Models.Movie
+
+@{
+    ViewBag.Title = "ShowViewBagMultiVal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShowViewBagVal</h2>
+
+<div>
+    <h4>Movie</h4>
+    <table>
+        <tr>
+            <td>ViewBag.Title</td>
+            <td>@ViewBag.Title</td>
+        </tr>
+        <tr>
+            <td>ViewBag.Description</td>
+            <td>@ViewBag.Description</td>
+        </tr>
+        <tr>
+            <td>ViewBag.MovieData</td>
+            <td>@ViewBag.MovieData</td>
+        </tr>
+        <tr>
+            <td>ViewBag.MovieDetails.MovieId</td>
+            <td>@ViewBag.MovieDetails.MovieId</td>
+        </tr>
+        <tr>
+            <td>ViewBag.MovieDetails.MovieName</td>
+            <td>@ViewBag.MovieDetails.MovieName</td>
+        </tr>
+        @{
+            int counter = 1;
+            foreach (var movieList in ViewBag.MovieList)
+            { 
+            <tr>
+                <td>MovieList.Name[@counter]</td>
+                <td>@movieList.MovieId</td>
+            </tr>
+                <tr>
+                    <td>MovieList.ID[@counter]</td>
+                    <td>@movieList.MovieName</td>
+                </tr>
+                counter = counter + 1;
+            }
+        }
+    </table>
+    <hr /><hr />
+</div>

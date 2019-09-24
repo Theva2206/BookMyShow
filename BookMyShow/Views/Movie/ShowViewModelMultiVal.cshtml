@@ -1,0 +1,31 @@
+﻿@using BookMyShow.ViewModels
+@model BookMyShow.ViewModels.MovieCustomerViewModel
+
+@{
+    ViewBag.Title = "Movie & Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShowViewModelMultiVal</h2>
+
+<table class="table">
+    <tr>
+        <th>Movie ID</th>
+        <th>Movie Name</th>
+    </tr>
+    <tr>
+        <td>
+            @Model.Movie.MovieId
+        </td>
+        <td>
+            @Model.Movie.MovieName
+        </td>
+    </tr>
+    <tr>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+    </tr>
+    
+    @Html.Partial("_Customer", Model.Customers)
+
+</table>

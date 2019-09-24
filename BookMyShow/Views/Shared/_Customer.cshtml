@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BookMyShow.Models.Customer>
+
+@if (!Model.Any())
+{
+    <tr>
+        <td colspan="2">No customer records found</td>
+    </tr>
+}
+else
+{
+    foreach (var cust in Model)
+    {
+        <tr>
+            <td>
+                @cust.CustID
+            </td>
+            <td>
+                @cust.CustName
+            </td>
+        </tr>
+    }
+
+}
